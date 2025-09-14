@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import CartScreen from '../screens/CartScreen';
+import ProductListScreen from '../screens/ProductListScreen';
 
 export type RootStackParamList = {
   ProductList: undefined;
@@ -12,13 +13,6 @@ export type RootStackParamList = {
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 const Tab = createBottomTabNavigator();
-
-const ProductListScreen = () => (
-  <View style={styles.screen}>
-    <Text style={styles.title}>상품 목록</Text>
-    <Text>여기에 상품들이 표시됩니다</Text>
-  </View>
-);
 
 const ProductDetailScreen = () => (
   <View style={styles.screen}>
@@ -68,7 +62,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#f8f9fa',
   },
   title: {
     fontSize: 24,

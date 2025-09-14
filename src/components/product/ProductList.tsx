@@ -73,24 +73,30 @@ const ProductList = () => {
     );
   };
   return (
-    <FlatList
-      data={products}
-      renderItem={({ item }) => (
-        <ProductCard product={item} onPress={handleProductPress} />
-      )}
-      keyExtractor={item => item.id.toString()}
-      onEndReached={loadMoreProducts}
-      onEndReachedThreshold={0.1}
-      refreshing={isLoading && currentPage === 1}
-      onRefresh={handleRefresh}
-      ListFooterComponent={renderFooter}
-    />
+    <View style={styles.container}>
+      <FlatList
+        data={products}
+        renderItem={({ item }) => (
+          <ProductCard product={item} onPress={handleProductPress} />
+        )}
+        keyExtractor={item => item.id.toString()}
+        onEndReached={loadMoreProducts}
+        onEndReachedThreshold={0.1}
+        refreshing={isLoading && currentPage === 1}
+        onRefresh={handleRefresh}
+        ListFooterComponent={renderFooter}
+      />
+    </View>
   );
 };
 
 export default ProductList;
 
 const styles = StyleSheet.create({
+  container: {
+    padding: 20,
+    backgroundColor: 'white',
+  },
   footerLoader: {
     flexDirection: 'row',
     justifyContent: 'center',
