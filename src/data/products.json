@@ -1,0 +1,279 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "신선한 바나나",
+      "price": 3500,
+      "image": "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=300&h=300&fit=crop",
+      "description": "달콤하고 영양가 높은 필리핀산 바나나입니다. 아침식사나 간식으로 좋아요.",
+      "category": "과일",
+      "stock": 50,
+      "rating": 4.8,
+      "unit": "개"
+    },
+    {
+      "id": 2,
+      "name": "국산 사과",
+      "price": 5200,
+      "image": "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=300&h=300&fit=crop",
+      "description": "아삭하고 달콤한 국산 사과입니다. 비타민이 풍부해요.",
+      "category": "과일",
+      "stock": 30,
+      "rating": 4.9,
+      "unit": "개"
+    },
+    {
+      "id": 3,
+      "name": "유기농 당근",
+      "price": 2800,
+      "image": "https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?w=300&h=300&fit=crop",
+      "description": "농약을 사용하지 않고 기른 유기농 당근입니다. 요리에 활용도가 높아요.",
+      "category": "채소",
+      "stock": 40,
+      "rating": 4.6,
+      "unit": "개"
+    },
+    {
+      "id": 4,
+      "name": "신선한 우유",
+      "price": 2900,
+      "image": "https://images.unsplash.com/photo-1563636619-e9143da7973b?w=300&h=300&fit=crop",
+      "description": "목장에서 갓 짜온 신선한 우유입니다. 칼슘이 풍부해요.",
+      "category": "유제품",
+      "stock": 20,
+      "rating": 4.7,
+      "unit": "팩"
+    },
+    {
+      "id": 5,
+      "name": "맛있는 식빵",
+      "price": 3200,
+      "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=300&h=300&fit=crop",
+      "description": "부드럽고 촉촉한 프리미엄 식빵입니다. 아침식사용으로 완벽해요.",
+      "category": "베이커리",
+      "stock": 15,
+      "rating": 4.5,
+      "unit": "개"
+    },
+    {
+      "id": 6,
+      "name": "계란 한판",
+      "price": 4500,
+      "image": "https://images.unsplash.com/photo-1582722872445-44dc5f7e3c8f?w=300&h=300&fit=crop",
+      "description": "신선한 농장 직송 계란입니다. 단백질 보충에 좋아요.",
+      "category": "축산물",
+      "stock": 25,
+      "rating": 4.8,
+      "unit": "판"
+    },
+    {
+      "id": 7,
+      "name": "참치캔",
+      "price": 2200,
+      "image": "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?w=300&h=300&fit=crop",
+      "description": "고품질 참치로 만든 캔입니다. 간편하게 드세요.",
+      "category": "가공식품",
+      "stock": 100,
+      "rating": 4.4,
+      "unit": "캔"
+    },
+    {
+      "id": 8,
+      "name": "신선한 토마토",
+      "price": 3800,
+      "image": "https://images.unsplash.com/photo-1592924357228-91a4daadcfea?w=300&h=300&fit=crop",
+      "description": "빨갛게 잘 익은 신선한 토마토입니다. 라이코펜이 풍부해요.",
+      "category": "채소",
+      "stock": 35,
+      "rating": 4.6,
+      "unit": "개"
+    },
+    {
+      "id": 9,
+      "name": "고급 쌀",
+      "price": 15000,
+      "image": "https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?w=300&h=300&fit=crop",
+      "description": "농부가 정성스럽게 기른 프리미엄 쌀입니다. 밥맛이 일품이에요.",
+      "category": "곡물",
+      "stock": 10,
+      "rating": 4.9,
+      "unit": "포"
+    },
+    {
+      "id": 10,
+      "name": "냉동 만두",
+      "price": 4800,
+      "image": "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=300&h=300&fit=crop",
+      "description": "집에서 만든 듯한 맛의 냉동 만두입니다. 간편하고 맛있어요.",
+      "category": "냉동식품",
+      "stock": 60,
+      "rating": 4.3,
+      "unit": "봉"
+    },
+    {
+      "id": 11,
+      "name": "아보카도",
+      "price": 2500,
+      "image": "https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?w=300&h=300&fit=crop",
+      "description": "건강한 지방이 풍부한 아보카도입니다. 샐러드나 토스트에 좋아요.",
+      "category": "과일",
+      "stock": 20,
+      "rating": 4.4,
+      "unit": "개"
+    },
+    {
+      "id": 12,
+      "name": "양파",
+      "price": 1800,
+      "image": "https://images.unsplash.com/photo-1508747703725-719777637510?w=300&h=300&fit=crop",
+      "description": "요리의 기본 재료인 신선한 양파입니다. 모든 요리에 활용 가능해요.",
+      "category": "채소",
+      "stock": 80,
+      "rating": 4.2,
+      "unit": "개"
+    },
+    {
+      "id": 13,
+      "name": "요거트",
+      "price": 1200,
+      "image": "https://images.unsplash.com/photo-1571212515416-fca854d593bb?w=300&h=300&fit=crop",
+      "description": "유산균이 살아있는 건강한 요거트입니다. 장 건강에 좋아요.",
+      "category": "유제품",
+      "stock": 45,
+      "rating": 4.6,
+      "unit": "개"
+    },
+    {
+      "id": 14,
+      "name": "닭가슴살",
+      "price": 6500,
+      "image": "https://images.unsplash.com/photo-1604503468506-a8da13d82791?w=300&h=300&fit=crop",
+      "description": "고단백 저지방 닭가슴살입니다. 다이어트와 근육 관리에 완벽해요.",
+      "category": "축산물",
+      "stock": 15,
+      "rating": 4.7,
+      "unit": "팩"
+    },
+    {
+      "id": 15,
+      "name": "올리브오일",
+      "price": 8900,
+      "image": "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=300&h=300&fit=crop",
+      "description": "100% 순수 엑스트라 버진 올리브오일입니다. 요리와 샐러드에 좋아요.",
+      "category": "조미료",
+      "stock": 30,
+      "rating": 4.8,
+      "unit": "병"
+    },
+    {
+      "id": 16,
+      "name": "파스타면",
+      "price": 3400,
+      "image": "https://images.unsplash.com/photo-1621996346565-e3dbc353d2e5?w=300&h=300&fit=crop",
+      "description": "이탈리아 정통 방식으로 만든 파스타면입니다. 쫄깃한 식감이 일품이에요.",
+      "category": "면류",
+      "stock": 25,
+      "rating": 4.5,
+      "unit": "봉"
+    },
+    {
+      "id": 17,
+      "name": "브로콜리",
+      "price": 3100,
+      "image": "https://images.unsplash.com/photo-1459411621453-7b03977f4bfc?w=300&h=300&fit=crop",
+      "description": "비타민과 섬유질이 풍부한 신선한 브로콜리입니다. 건강식으로 최고예요.",
+      "category": "채소",
+      "stock": 40,
+      "rating": 4.3,
+      "unit": "개"
+    },
+    {
+      "id": 18,
+      "name": "연어 회",
+      "price": 12000,
+      "image": "https://images.unsplash.com/photo-1579952363873-27d3bfad9c0d?w=300&h=300&fit=crop",
+      "description": "신선한 노르웨이산 연어회입니다. 오메가3가 풍부해요.",
+      "category": "수산물",
+      "stock": 8,
+      "rating": 4.9,
+      "unit": "팩"
+    },
+    {
+      "id": 19,
+      "name": "딸기",
+      "price": 4200,
+      "image": "https://images.unsplash.com/photo-1464965911861-746a04b4bca6?w=300&h=300&fit=crop",
+      "description": "달콤하고 상큼한 국산 딸기입니다. 비타민C가 가득해요.",
+      "category": "과일",
+      "stock": 18,
+      "rating": 4.8,
+      "unit": "팩"
+    },
+    {
+      "id": 20,
+      "name": "녹차",
+      "price": 7800,
+      "image": "https://images.unsplash.com/photo-1594631661960-0e1ec448de24?w=300&h=300&fit=crop",
+      "description": "고급 제주산 녹차입니다. 항산화 성분이 풍부한 건강차예요.",
+      "category": "음료",
+      "stock": 22,
+      "rating": 4.6,
+      "unit": "통"
+    },
+    {
+      "id": 21,
+      "name": "감자",
+      "price": 2400,
+      "image": "https://images.unsplash.com/photo-1518977676601-b53f82aba655?w=300&h=300&fit=crop",
+      "description": "포슬포슬한 국산 감자입니다. 찜, 구이, 튀김 등 다양하게 요리할 수 있어요.",
+      "category": "채소",
+      "stock": 70,
+      "rating": 4.4,
+      "unit": "개"
+    },
+    {
+      "id": 22,
+      "name": "치즈",
+      "price": 5600,
+      "image": "https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?w=300&h=300&fit=crop",
+      "description": "진짜 우유로 만든 자연 치즈입니다. 피자, 파스타에 완벽해요.",
+      "category": "유제품",
+      "stock": 28,
+      "rating": 4.7,
+      "unit": "팩"
+    },
+    {
+      "id": 23,
+      "name": "라면",
+      "price": 800,
+      "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=300&h=300&fit=crop",
+      "description": "한국인의 소울푸드 라면입니다. 간편하고 맛있어요.",
+      "category": "가공식품",
+      "stock": 200,
+      "rating": 4.2,
+      "unit": "개"
+    },
+    {
+      "id": 24,
+      "name": "오렌지",
+      "price": 6800,
+      "image": "https://images.unsplash.com/photo-1547514701-42782101795e?w=300&h=300&fit=crop",
+      "description": "달콤하고 상큼한 미국산 오렌지입니다. 비타민C 보충에 좋아요.",
+      "category": "과일",
+      "stock": 35,
+      "rating": 4.5,
+      "unit": "봉"
+    },
+    {
+      "id": 25,
+      "name": "두부",
+      "price": 2100,
+      "image": "https://images.unsplash.com/photo-1596040048019-c06ec9a64027?w=300&h=300&fit=crop",
+      "description": "100% 국산 콩으로 만든 순두부입니다. 단백질이 풍부해요.",
+      "category": "가공식품",
+      "stock": 50,
+      "rating": 4.3,
+      "unit": "모"
+    }
+  ]
+}
