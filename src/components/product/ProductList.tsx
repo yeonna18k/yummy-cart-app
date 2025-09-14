@@ -1,3 +1,5 @@
+import { useNavigation } from '@react-navigation/native';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import React, { useCallback, useEffect, useState } from 'react';
 import {
   ActivityIndicator,
@@ -6,9 +8,15 @@ import {
   Text,
   View,
 } from 'react-native';
+import { RootStackParamList } from '../../navigation/AppNavigator';
 import { mockApi } from '../../services/mockApi';
 import { Product } from '../../types/Product';
 import ProductCard from './ProductCard';
+
+type ProductListNavigationProp = NativeStackNavigationProp<
+  RootStackParamList,
+  'ProductList'
+>;
 
 const ProductList = () => {
   // 비즈니스 로직 및 상태 관리
@@ -17,6 +25,8 @@ const ProductList = () => {
   const [isLoadingMore, setIsLoadingMore] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);
+
+  const navigation = useNavigation<ProductListNavigationProp>();
 
   const loadProducts = useCallback(async (page = 1, isRefresh = false) => {
     if (page === 1) {
@@ -55,13 +65,23 @@ const ProductList = () => {
     setCurrentPage(1);
   }, [loadProducts]);
 
-  const handleProductPress = (productId: number) => {
-    console.log('Product pressed:', productId);
-  };
+  const handleProductPress = useCallback(
+    (productId: number) => {
+      navigation.navigate('ProductDetail', { productId });
+    },
+    [navigation],
+  );
 
   useEffect(() => {
     loadProducts();
   }, [loadProducts]);
+
+  const renderItem = useCallback(
+    ({ item }: { item: Product }) => (
+      <ProductCard product={item} onPress={handleProductPress} />
+    ),
+    [handleProductPress],
+  );
 
   const renderFooter = () => {
     if (!isLoadingMore) return null;
@@ -76,9 +96,7 @@ const ProductList = () => {
     <View style={styles.container}>
       <FlatList
         data={products}
-        renderItem={({ item }) => (
-          <ProductCard product={item} onPress={handleProductPress} />
-        )}
+        renderItem={renderItem}
         keyExtractor={item => item.id.toString()}
         onEndReached={loadMoreProducts}
         onEndReachedThreshold={0.1}
