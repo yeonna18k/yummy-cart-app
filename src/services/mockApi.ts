@@ -1,9 +1,10 @@
 import productsData from '../data/products.json';
+import { ProductsResponse } from '../types/Product';
 
 const delay = (ms: number) =>
   new Promise(resolve => setTimeout(() => resolve(undefined), ms));
 
-const products = productsData.products;
+const data = productsData as ProductsResponse;
 
 export const mockApi = {
   getProducts: async (page = 1, limit = 10) => {
@@ -13,14 +14,14 @@ export const mockApi = {
     const endIndex = startIndex + limit;
 
     return {
-      data: products.slice(startIndex, endIndex),
-      hasMore: endIndex < products.length,
-      total: products.length,
+      data: data.products.slice(startIndex, endIndex),
+      hasMore: endIndex < data.products.length,
+      total: data.products.length,
     };
   },
 
   getProductById: async (id: number) => {
     await delay(300);
-    return products.find(product => product.id === id);
+    return data.products.find(product => product.id === id);
   },
 };
