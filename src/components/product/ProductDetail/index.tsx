@@ -1,7 +1,8 @@
-import { RouteProp, useRoute } from '@react-navigation/native';
+import { RouteProp, useNavigation, useRoute } from '@react-navigation/native';
 import React, { useEffect, useState } from 'react';
 import { Image, ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
+import { useCart } from '../../../hooks/useCart';
 import { RootStackParamList } from '../../../navigation/AppNavigator';
 import { mockApi } from '../../../services/mockApi';
 import { Product } from '../../../types/Product';
@@ -14,6 +15,8 @@ type ProductDetailRouteProp = RouteProp<RootStackParamList, 'ProductDetail'>;
 const ProductDetail = () => {
   const route = useRoute<ProductDetailRouteProp>();
   const { productId } = route.params;
+  const { addToCart } = useCart();
+  const navigation = useNavigation();
 
   const [product, setProduct] = useState<Product | null>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -43,8 +46,18 @@ const ProductDetail = () => {
     if (quantity > 1) setQuantity(prev => prev - 1);
   };
 
-  const addToCart = () => {
-    console.log(`${product?.name} ${quantity}개 장바구니에 추가`);
+  const handleAddToCart = () => {
+    const newItem = {
+      id: product?.id!,
+      name: product?.name!,
+      originalPrice: product?.originalPrice!,
+      discountRate: product?.discountRate!,
+      salePrice: product?.salePrice!,
+      image: product?.image!,
+      quantity: quantity,
+    };
+    addToCart(newItem);
+    navigation.goBack();
   };
 
   useEffect(() => {
@@ -114,7 +127,10 @@ const ProductDetail = () => {
         </ScrollView>
 
         <View style={styles.bottomButtonContainer}>
-          <TouchableOpacity style={styles.addToCartButton} onPress={addToCart}>
+          <TouchableOpacity
+            style={styles.addToCartButton}
+            onPress={handleAddToCart}
+          >
             <Text style={styles.addToCartButtonText}>
               {quantity}건 |{' '}
               {product?.salePrice &&

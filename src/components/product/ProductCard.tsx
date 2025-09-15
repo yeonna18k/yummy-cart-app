@@ -10,8 +10,13 @@ interface ProductCardProps {
 const ProductCard = ({ product, onPress }: ProductCardProps) => {
   // UI만 담당
   return (
-    <TouchableOpacity onPress={() => onPress(product.id)} style={styles.card}>
-      <Image source={{ uri: product.image }} style={styles.cardImage} />
+    <TouchableOpacity
+      onPress={() => onPress(product.id)}
+      style={styles.container}
+    >
+      <View style={styles.cardImageContainer}>
+        <Image source={{ uri: product.image }} style={styles.cardImage} />
+      </View>
       <View>
         <Text style={styles.cardTitle}>{product.name}</Text>
         <Text style={styles.cardPrice}>
@@ -25,7 +30,7 @@ const ProductCard = ({ product, onPress }: ProductCardProps) => {
 export default ProductCard;
 
 const styles = StyleSheet.create({
-  card: {
+  container: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 30,
@@ -33,10 +38,14 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: '#eee',
   },
-  cardImage: {
+  cardImageContainer: {
     width: 80,
     height: 80,
     borderRadius: 8,
+  },
+  cardImage: {
+    width: '100%',
+    height: '100%',
   },
   cardTitle: {
     fontSize: 16,

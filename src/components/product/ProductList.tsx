@@ -1,5 +1,3 @@
-import { useNavigation } from '@react-navigation/native';
-import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import React, { useCallback, useEffect, useState } from 'react';
 import {
   ActivityIndicator,
@@ -8,25 +6,19 @@ import {
   Text,
   View,
 } from 'react-native';
-import { RootStackParamList } from '../../navigation/AppNavigator';
+import { useProductNavigation } from '../../hooks/useProductNavigation';
 import { mockApi } from '../../services/mockApi';
 import { Product } from '../../types/Product';
 import ProductCard from './ProductCard';
 
-type ProductListNavigationProp = NativeStackNavigationProp<
-  RootStackParamList,
-  'ProductList'
->;
-
 const ProductList = () => {
+  const { navigateToProductDetail } = useProductNavigation();
   // 비즈니스 로직 및 상태 관리
   const [products, setProducts] = useState<Product[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [isLoadingMore, setIsLoadingMore] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);
-
-  const navigation = useNavigation<ProductListNavigationProp>();
 
   const loadProducts = useCallback(async (page = 1, isRefresh = false) => {
     if (page === 1) {
@@ -65,22 +57,15 @@ const ProductList = () => {
     setCurrentPage(1);
   }, [loadProducts]);
 
-  const handleProductPress = useCallback(
-    (productId: number) => {
-      navigation.navigate('ProductDetail', { productId });
-    },
-    [navigation],
-  );
-
   useEffect(() => {
     loadProducts();
   }, [loadProducts]);
 
   const renderItem = useCallback(
     ({ item }: { item: Product }) => (
-      <ProductCard product={item} onPress={handleProductPress} />
+      <ProductCard product={item} onPress={navigateToProductDetail} />
     ),
-    [handleProductPress],
+    [navigateToProductDetail],
   );
 
   const renderFooter = () => {
