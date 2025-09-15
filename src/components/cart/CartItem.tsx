@@ -11,7 +11,7 @@ interface CartItemProps {
 }
 
 const CartItem = ({ item, onPress }: CartItemProps) => {
-  const { updateQuantity } = useCart();
+  const { updateQuantity, removeFromCart } = useCart();
 
   const decreaseQuantity = () => {
     if (item.quantity > 1) {
@@ -21,6 +21,10 @@ const CartItem = ({ item, onPress }: CartItemProps) => {
 
   const increaseQuantity = () => {
     updateQuantity(item.id, item.quantity + 1);
+  };
+
+  const handleRemoveItem = () => {
+    removeFromCart(item.id);
   };
 
   return (
@@ -38,7 +42,7 @@ const CartItem = ({ item, onPress }: CartItemProps) => {
       </View>
 
       <View style={styles.itemOptionContainer}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={handleRemoveItem}>
           <Ionicons name="trash" size={20} color={colors.primary} />
         </TouchableOpacity>
         <View style={styles.quantitySelector}>
@@ -94,9 +98,8 @@ const styles = StyleSheet.create({
     gap: 10,
   },
   itemOptionContainer: {
-    flexDirection: 'row',
-    justifyContent: 'flex-end',
-    alignItems: 'center',
+    flexDirection: 'column',
+    alignItems: 'flex-end',
     gap: 20,
   },
   quantityButton: {
