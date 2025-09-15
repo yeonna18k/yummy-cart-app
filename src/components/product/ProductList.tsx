@@ -113,7 +113,6 @@ export default ProductList;
 const styles = StyleSheet.create({
   container: {
     padding: 20,
-    backgroundColor: 'white',
   },
   footerLoader: {
     flexDirection: 'row',

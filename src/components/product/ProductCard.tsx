@@ -1,8 +1,9 @@
 import React from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Product } from '../../types/Product';
 
 interface ProductCardProps {
-  product: any;
+  product: Product;
   onPress: (productId: number) => void;
 }
 
@@ -13,7 +14,9 @@ const ProductCard = ({ product, onPress }: ProductCardProps) => {
       <Image source={{ uri: product.image }} style={styles.cardImage} />
       <View>
         <Text style={styles.cardTitle}>{product.name}</Text>
-        <Text style={styles.cardPrice}>{product.price}원</Text>
+        <Text style={styles.cardPrice}>
+          {product.salePrice.toLocaleString()}원
+        </Text>
       </View>
     </TouchableOpacity>
   );
