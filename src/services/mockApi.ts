@@ -4,7 +4,7 @@ import { ProductsResponse } from '../types/Product';
 const delay = (ms: number) =>
   new Promise(resolve => setTimeout(() => resolve(undefined), ms));
 
-const data = productsData as ProductsResponse;
+const products = productsData as ProductsResponse;
 
 export const mockApi = {
   getProducts: async (page = 1, limit = 10) => {
@@ -14,14 +14,14 @@ export const mockApi = {
     const endIndex = startIndex + limit;
 
     return {
-      data: data.products.slice(startIndex, endIndex),
-      hasMore: endIndex < data.products.length,
-      total: data.products.length,
+      data: products.slice(startIndex, endIndex),
+      hasMore: endIndex < products.length,
+      total: products.length,
     };
   },
 
   getProductById: async (id: number) => {
     await delay(300);
-    return data.products.find(product => product.id === id);
+    return products.find(product => product.id === id);
   },
 };
