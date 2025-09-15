@@ -27,10 +27,27 @@ export const styles = StyleSheet.create({
   titlePriceContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
+    alignItems: 'center',
     marginBottom: 10,
   },
   productName: {
     fontSize: 24,
+    fontWeight: 'bold',
+  },
+  productPriceContainer: {
+    alignItems: 'flex-end',
+  },
+  originalPriceContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+  },
+  productOriginalPrice: {
+    textDecorationLine: 'line-through',
+    color: '#bbb',
+  },
+  productDiscountRate: {
+    color: colors.primary,
     fontWeight: 'bold',
   },
   productPrice: {

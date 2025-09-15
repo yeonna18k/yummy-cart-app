@@ -1,5 +1,6 @@
 import React from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { colors } from '../../constants/colors';
 import { Product } from '../../types/Product';
 
 interface ProductCardProps {
@@ -18,10 +19,15 @@ const ProductCard = ({ product, onPress }: ProductCardProps) => {
         <Image source={{ uri: product.image }} style={styles.cardImage} />
       </View>
       <View>
-        <Text style={styles.cardTitle}>{product.name}</Text>
-        <Text style={styles.cardPrice}>
-          {product.salePrice.toLocaleString()}원
-        </Text>
+        <Text style={styles.cardProductName}>{product.name}</Text>
+        <View style={styles.cardPriceContainer}>
+          <Text style={styles.cardPrice}>
+            {product.salePrice.toLocaleString()}원
+          </Text>
+          <Text style={styles.cardDiscountRateText}>
+            ({product.discountRate * 100}% 할인)
+          </Text>
+        </View>
       </View>
     </TouchableOpacity>
   );
@@ -41,18 +47,28 @@ const styles = StyleSheet.create({
   cardImageContainer: {
     width: 80,
     height: 80,
-    borderRadius: 8,
   },
   cardImage: {
     width: '100%',
     height: '100%',
+    borderRadius: 8,
   },
-  cardTitle: {
+  cardProductName: {
     fontSize: 16,
     fontWeight: 'bold',
     marginBottom: 5,
   },
+  cardPriceContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+  },
   cardPrice: {
     fontSize: 16,
+  },
+  cardDiscountRateText: {
+    fontSize: 14,
+    fontWeight: 'bold',
+    color: colors.primary,
   },
 });

@@ -2,6 +2,8 @@ import { RouteProp, useNavigation, useRoute } from '@react-navigation/native';
 import React, { useEffect, useState } from 'react';
 import { Image, ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
+import Iconicons from 'react-native-vector-icons/Ionicons';
+import { colors } from '../../../constants/colors';
 import { useCart } from '../../../hooks/useCart';
 import { RootStackParamList } from '../../../navigation/AppNavigator';
 import { mockApi } from '../../../services/mockApi';
@@ -93,9 +95,24 @@ const ProductDetail = () => {
           <View style={styles.infoContainer}>
             <View style={styles.titlePriceContainer}>
               <Text style={styles.productName}>{product?.name}</Text>
-              <Text style={styles.productPrice}>
-                {product?.salePrice.toLocaleString()}원
-              </Text>
+              <View style={styles.productPriceContainer}>
+                <View style={styles.originalPriceContainer}>
+                  <Text style={styles.productOriginalPrice}>
+                    {product.originalPrice}원
+                  </Text>
+                  <Text style={styles.productDiscountRate}>
+                    {product.discountRate * 100}% 할인
+                    <Iconicons
+                      name="pricetag"
+                      size={14}
+                      color={colors.primary}
+                    />
+                  </Text>
+                </View>
+                <Text style={styles.productPrice}>
+                  {product?.salePrice.toLocaleString()}원
+                </Text>
+              </View>
             </View>
             <Text style={styles.productDescription}>
               {product?.description}
