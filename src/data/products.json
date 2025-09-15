@@ -178,5 +178,725 @@
     "salePrice": 5950,
     "image": "https://picsum.photos/seed/waffle1/400/400",
     "description": "바삭한 와플 위에 달콤한 아이스크림을 얹은 디저트."
+  },
+  {
+    "id": 21,
+    "name": "페퍼로니 피자",
+    "originalPrice": 16000,
+    "discountRate": 0.15,
+    "salePrice": 13600,
+    "image": "https://picsum.photos/seed/pizza2/400/400",
+    "description": "매콤한 페퍼로니와 치즈가 조화를 이루는 피자."
+  },
+  {
+    "id": 22,
+    "name": "치킨 버거",
+    "originalPrice": 8500,
+    "discountRate": 0.12,
+    "salePrice": 7480,
+    "image": "https://picsum.photos/seed/burger2/400/400",
+    "description": "바삭한 프라이드 치킨이 들어간 클래식 버거."
+  },
+  {
+    "id": 23,
+    "name": "새우튀김",
+    "originalPrice": 13000,
+    "discountRate": 0.18,
+    "salePrice": 10660,
+    "image": "https://picsum.photos/seed/shrimp1/400/400",
+    "description": "크고 신선한 새우를 바삭하게 튀긴 일본식 요리."
+  },
+  {
+    "id": 24,
+    "name": "회덮밥",
+    "originalPrice": 15000,
+    "discountRate": 0.2,
+    "salePrice": 12000,
+    "image": "https://picsum.photos/seed/sashimi1/400/400",
+    "description": "각종 생선회와 야채를 올린 한국식 덮밥."
+  },
+  {
+    "id": 25,
+    "name": "된장찌개",
+    "originalPrice": 8000,
+    "discountRate": 0.1,
+    "salePrice": 7200,
+    "image": "https://picsum.photos/seed/stew2/400/400",
+    "description": "구수한 된장과 두부, 야채를 넣고 끓인 국물 요리."
+  },
+  {
+    "id": 26,
+    "name": "시저 샐러드",
+    "originalPrice": 12000,
+    "discountRate": 0.25,
+    "salePrice": 9000,
+    "image": "https://picsum.photos/seed/salad2/400/400",
+    "description": "로메인 상추와 파마산 치즈, 크루통이 들어간 클래식 샐러드."
+  },
+  {
+    "id": 27,
+    "name": "육개장",
+    "originalPrice": 11000,
+    "discountRate": 0.15,
+    "salePrice": 9350,
+    "image": "https://picsum.photos/seed/soup2/400/400",
+    "description": "매콤하고 얼큰한 소고기 국물이 일품인 한국 전통 국물."
+  },
+  {
+    "id": 28,
+    "name": "초콜릿 케이크",
+    "originalPrice": 18000,
+    "discountRate": 0.22,
+    "salePrice": 14040,
+    "image": "https://picsum.photos/seed/cake2/400/400",
+    "description": "진한 초콜릿 크림이 듬뿍 들어간 달콤한 케이크."
+  },
+  {
+    "id": 29,
+    "name": "참치 덮밥",
+    "originalPrice": 13500,
+    "discountRate": 0.18,
+    "salePrice": 11070,
+    "image": "https://picsum.photos/seed/tuna1/400/400",
+    "description": "신선한 참치회와 아보카도가 올라간 덮밥."
+  },
+  {
+    "id": 30,
+    "name": "까르보나라",
+    "originalPrice": 14000,
+    "discountRate": 0.15,
+    "salePrice": 11900,
+    "image": "https://picsum.photos/seed/pasta2/400/400",
+    "description": "크림소스와 베이컨이 어우러진 진한 파스타."
+  },
+  {
+    "id": 31,
+    "name": "순대국밥",
+    "originalPrice": 9000,
+    "discountRate": 0.1,
+    "salePrice": 8100,
+    "image": "https://picsum.photos/seed/soup3/400/400",
+    "description": "따뜻한 국물에 순대와 돼지고기가 들어간 보양식."
+  },
+  {
+    "id": 32,
+    "name": "짬뽕",
+    "originalPrice": 8500,
+    "discountRate": 0.12,
+    "salePrice": 7480,
+    "image": "https://picsum.photos/seed/noodle2/400/400",
+    "description": "매콤한 국물과 해산물이 가득한 중화 면 요리."
+  },
+  {
+    "id": 33,
+    "name": "치즈케이크",
+    "originalPrice": 20000,
+    "discountRate": 0.25,
+    "salePrice": 15000,
+    "image": "https://picsum.photos/seed/cheesecake1/400/400",
+    "description": "부드럽고 진한 치즈가 입안에서 녹는 뉴욕 스타일 케이크."
+  },
+  {
+    "id": 34,
+    "name": "베이글",
+    "originalPrice": 4000,
+    "discountRate": 0.1,
+    "salePrice": 3600,
+    "image": "https://picsum.photos/seed/bagel1/400/400",
+    "description": "쫄깃한 식감과 고소한 맛이 특징인 유대인 전통 빵."
+  },
+  {
+    "id": 35,
+    "name": "미소라멘",
+    "originalPrice": 11000,
+    "discountRate": 0.18,
+    "salePrice": 9020,
+    "image": "https://picsum.photos/seed/ramen2/400/400",
+    "description": "일본 된장을 베이스로 한 진한 국물의 라멘."
+  },
+  {
+    "id": 36,
+    "name": "양꼬치",
+    "originalPrice": 15000,
+    "discountRate": 0.2,
+    "salePrice": 12000,
+    "image": "https://picsum.photos/seed/skewer1/400/400",
+    "description": "향신료로 양념한 양고기를 구운 중국식 꼬치."
+  },
+  {
+    "id": 37,
+    "name": "스테이크",
+    "originalPrice": 28000,
+    "discountRate": 0.15,
+    "salePrice": 23800,
+    "image": "https://picsum.photos/seed/steak1/400/400",
+    "description": "부드럽고 육즙 가득한 프리미엄 소고기 스테이크."
+  },
+  {
+    "id": 38,
+    "name": "클럽 샌드위치",
+    "originalPrice": 12000,
+    "discountRate": 0.15,
+    "salePrice": 10200,
+    "image": "https://picsum.photos/seed/sandwich2/400/400",
+    "description": "베이컨, 토마토, 양상추가 층층이 쌓인 클래식 샌드위치."
+  },
+  {
+    "id": 39,
+    "name": "새우볶음밥",
+    "originalPrice": 9000,
+    "discountRate": 0.12,
+    "salePrice": 7920,
+    "image": "https://picsum.photos/seed/friedrice2/400/400",
+    "description": "통통한 새우와 야채를 넣고 볶은 중화식 볶음밥."
+  },
+  {
+    "id": 40,
+    "name": "팬케이크",
+    "originalPrice": 8000,
+    "discountRate": 0.2,
+    "salePrice": 6400,
+    "image": "https://picsum.photos/seed/pancake1/400/400",
+    "description": "메이플 시럽과 버터가 올라간 푹신한 팬케이크."
+  },
+  {
+    "id": 41,
+    "name": "고르곤졸라 피자",
+    "originalPrice": 17000,
+    "discountRate": 0.18,
+    "salePrice": 13940,
+    "image": "https://picsum.photos/seed/pizza3/400/400",
+    "description": "진한 고르곤졸라 치즈와 견과류가 어우러진 피자."
+  },
+  {
+    "id": 42,
+    "name": "베이컨 버거",
+    "originalPrice": 9500,
+    "discountRate": 0.15,
+    "salePrice": 8075,
+    "image": "https://picsum.photos/seed/burger3/400/400",
+    "description": "바삭한 베이컨과 패티가 들어간 풍미 가득한 버거."
+  },
+  {
+    "id": 43,
+    "name": "오코노미야끼",
+    "originalPrice": 11000,
+    "discountRate": 0.2,
+    "salePrice": 8800,
+    "image": "https://picsum.photos/seed/okonomiyaki1/400/400",
+    "description": "양배추와 해산물이 들어간 일본식 팬케이크."
+  },
+  {
+    "id": 44,
+    "name": "광어회",
+    "originalPrice": 25000,
+    "discountRate": 0.22,
+    "salePrice": 19500,
+    "image": "https://picsum.photos/seed/sashimi2/400/400",
+    "description": "신선하고 쫄깃한 광어를 얇게 썬 회."
+  },
+  {
+    "id": 45,
+    "name": "부대찌개",
+    "originalPrice": 10000,
+    "discountRate": 0.1,
+    "salePrice": 9000,
+    "image": "https://picsum.photos/seed/stew3/400/400",
+    "description": "햄과 소시지, 라면을 넣고 끓인 한국식 퓨전 찌개."
+  },
+  {
+    "id": 46,
+    "name": "니코이즈 샐러드",
+    "originalPrice": 13000,
+    "discountRate": 0.18,
+    "salePrice": 10660,
+    "image": "https://picsum.photos/seed/salad3/400/400",
+    "description": "참치와 삶은 달걀, 야채가 들어간 프랑스식 샐러드."
+  },
+  {
+    "id": 47,
+    "name": "감자탕",
+    "originalPrice": 12000,
+    "discountRate": 0.15,
+    "salePrice": 10200,
+    "image": "https://picsum.photos/seed/soup4/400/400",
+    "description": "뼈해장국이라고도 불리는 얼큰한 돼지등뼈 국물."
+  },
+  {
+    "id": 48,
+    "name": "티라미수",
+    "originalPrice": 8000,
+    "discountRate": 0.25,
+    "salePrice": 6000,
+    "image": "https://picsum.photos/seed/tiramisu1/400/400",
+    "description": "커피와 마스카포네 치즈의 조화가 완벽한 이탈리아 디저트."
+  },
+  {
+    "id": 49,
+    "name": "알탕",
+    "originalPrice": 16000,
+    "discountRate": 0.2,
+    "salePrice": 12800,
+    "image": "https://picsum.photos/seed/soup5/400/400",
+    "description": "명란과 대구알이 들어간 얼큰한 국물 요리."
+  },
+  {
+    "id": 50,
+    "name": "아라비아타",
+    "originalPrice": 12000,
+    "discountRate": 0.12,
+    "salePrice": 10560,
+    "image": "https://picsum.photos/seed/pasta3/400/400",
+    "description": "매콤한 토마토 소스가 특징인 이탈리아 파스타."
+  },
+  {
+    "id": 51,
+    "name": "닭갈비",
+    "originalPrice": 14000,
+    "discountRate": 0.18,
+    "salePrice": 11480,
+    "image": "https://picsum.photos/seed/chicken2/400/400",
+    "description": "매콤달콤한 양념에 재운 닭고기와 야채를 볶은 요리."
+  },
+  {
+    "id": 52,
+    "name": "냉면",
+    "originalPrice": 9000,
+    "discountRate": 0.1,
+    "salePrice": 8100,
+    "image": "https://picsum.photos/seed/naengmyeon1/400/400",
+    "description": "시원한 육수와 쫄깃한 면발이 특징인 여름 별미."
+  },
+  {
+    "id": 53,
+    "name": "마들렌",
+    "originalPrice": 6000,
+    "discountRate": 0.15,
+    "salePrice": 5100,
+    "image": "https://picsum.photos/seed/madeleine1/400/400",
+    "description": "조개 모양의 부드럽고 달콤한 프랑스 전통 케이크."
+  },
+  {
+    "id": 54,
+    "name": "도넛",
+    "originalPrice": 3000,
+    "discountRate": 0.1,
+    "salePrice": 2700,
+    "image": "https://picsum.photos/seed/donut1/400/400",
+    "description": "달콤한 글레이즈가 발린 폭신한 도넛."
+  },
+  {
+    "id": 55,
+    "name": "쇼유라멘",
+    "originalPrice": 10500,
+    "discountRate": 0.2,
+    "salePrice": 8400,
+    "image": "https://picsum.photos/seed/ramen3/400/400",
+    "description": "간장 베이스의 깔끔하고 담백한 일본 라멘."
+  },
+  {
+    "id": 56,
+    "name": "파히타",
+    "originalPrice": 16000,
+    "discountRate": 0.15,
+    "salePrice": 13600,
+    "image": "https://picsum.photos/seed/fajita1/400/400",
+    "description": "구운 고기와 야채를 토르티야에 싸먹는 멕시코 요리."
+  },
+  {
+    "id": 57,
+    "name": "랍스터 롤",
+    "originalPrice": 25000,
+    "discountRate": 0.2,
+    "salePrice": 20000,
+    "image": "https://picsum.photos/seed/lobster1/400/400",
+    "description": "신선한 랍스터 살이 듬뿍 들어간 프리미엄 샌드위치."
+  },
+  {
+    "id": 58,
+    "name": "BLT 샌드위치",
+    "originalPrice": 9000,
+    "discountRate": 0.12,
+    "salePrice": 7920,
+    "image": "https://picsum.photos/seed/sandwich3/400/400",
+    "description": "베이컨, 양상추, 토마토가 들어간 클래식 샌드위치."
+  },
+  {
+    "id": 59,
+    "name": "볶음우동",
+    "originalPrice": 8500,
+    "discountRate": 0.15,
+    "salePrice": 7225,
+    "image": "https://picsum.photos/seed/udon1/400/400",
+    "description": "야채와 함께 볶은 쫄깃한 우동면 요리."
+  },
+  {
+    "id": 60,
+    "name": "프렌치 토스트",
+    "originalPrice": 7000,
+    "discountRate": 0.2,
+    "salePrice": 5600,
+    "image": "https://picsum.photos/seed/toast1/400/400",
+    "description": "달걀물에 적신 빵을 구워낸 달콤한 브런치 메뉴."
+  },
+  {
+    "id": 61,
+    "name": "하와이안 피자",
+    "originalPrice": 16500,
+    "discountRate": 0.18,
+    "salePrice": 13530,
+    "image": "https://picsum.photos/seed/pizza4/400/400",
+    "description": "파인애플과 햄이 올라간 달콤짭짤한 피자."
+  },
+  {
+    "id": 62,
+    "name": "피시버거",
+    "originalPrice": 8000,
+    "discountRate": 0.1,
+    "salePrice": 7200,
+    "image": "https://picsum.photos/seed/burger4/400/400",
+    "description": "생선 패티와 타르타르 소스가 들어간 담백한 버거."
+  },
+  {
+    "id": 63,
+    "name": "타코야키",
+    "originalPrice": 7000,
+    "discountRate": 0.15,
+    "salePrice": 5950,
+    "image": "https://picsum.photos/seed/takoyaki1/400/400",
+    "description": "문어가 들어간 동글동글한 일본식 간식."
+  },
+  {
+    "id": 64,
+    "name": "우니 초밥",
+    "originalPrice": 18000,
+    "discountRate": 0.25,
+    "salePrice": 13500,
+    "image": "https://picsum.photos/seed/sushi2/400/400",
+    "description": "바다의 버터라 불리는 성게알을 올린 초밥."
+  },
+  {
+    "id": 65,
+    "name": "순두부찌개",
+    "originalPrice": 8500,
+    "discountRate": 0.12,
+    "salePrice": 7480,
+    "image": "https://picsum.photos/seed/stew4/400/400",
+    "description": "부드러운 순두부와 매콤한 국물이 일품인 찌개."
+  },
+  {
+    "id": 66,
+    "name": "코브 샐러드",
+    "originalPrice": 14000,
+    "discountRate": 0.2,
+    "salePrice": 11200,
+    "image": "https://picsum.photos/seed/salad4/400/400",
+    "description": "베이컨, 치킨, 치즈가 토핑된 푸짐한 샐러드."
+  },
+  {
+    "id": 67,
+    "name": "설렁탕",
+    "originalPrice": 10000,
+    "discountRate": 0.1,
+    "salePrice": 9000,
+    "image": "https://picsum.photos/seed/soup6/400/400",
+    "description": "오랫동안 우린 사골 국물의 진한 맛이 특징인 국물."
+  },
+  {
+    "id": 68,
+    "name": "크림브륄레",
+    "originalPrice": 9000,
+    "discountRate": 0.22,
+    "salePrice": 7020,
+    "image": "https://picsum.photos/seed/brulee1/400/400",
+    "description": "표면이 캐러멜화된 부드러운 커스터드 디저트."
+  },
+  {
+    "id": 69,
+    "name": "육회덮밥",
+    "originalPrice": 17000,
+    "discountRate": 0.18,
+    "salePrice": 13940,
+    "image": "https://picsum.photos/seed/beef1/400/400",
+    "description": "신선한 생 쇠고기를 올린 한국식 덮밥."
+  },
+  {
+    "id": 70,
+    "name": "페스토 파스타",
+    "originalPrice": 13500,
+    "discountRate": 0.15,
+    "salePrice": 11475,
+    "image": "https://picsum.photos/seed/pasta4/400/400",
+    "description": "바질과 마늘로 만든 페스토 소스 파스타."
+  },
+  {
+    "id": 71,
+    "name": "치킨윙",
+    "originalPrice": 12000,
+    "discountRate": 0.2,
+    "salePrice": 9600,
+    "image": "https://picsum.photos/seed/wing1/400/400",
+    "description": "매콤달콤한 소스를 발라 구운 치킨 날개."
+  },
+  {
+    "id": 72,
+    "name": "물냉면",
+    "originalPrice": 8500,
+    "discountRate": 0.12,
+    "salePrice": 7480,
+    "image": "https://picsum.photos/seed/naengmyeon2/400/400",
+    "description": "차가운 동치미 국물에 메밀면을 말아낸 시원한 면 요리."
+  },
+  {
+    "id": 73,
+    "name": "에클레어",
+    "originalPrice": 5500,
+    "discountRate": 0.18,
+    "salePrice": 4510,
+    "image": "https://picsum.photos/seed/eclair1/400/400",
+    "description": "크림이 가득 들어간 길쭉한 프랑스 디저트."
+  },
+  {
+    "id": 74,
+    "name": "머핀",
+    "originalPrice": 4000,
+    "discountRate": 0.1,
+    "salePrice": 3600,
+    "image": "https://picsum.photos/seed/muffin1/400/400",
+    "description": "블루베리가 들어간 촉촉한 아메리칸 머핀."
+  },
+  {
+    "id": 75,
+    "name": "시오라멘",
+    "originalPrice": 11500,
+    "discountRate": 0.15,
+    "salePrice": 9775,
+    "image": "https://picsum.photos/seed/ramen4/400/400",
+    "description": "소금을 베이스로 한 깔끔하고 담백한 일본 라멘."
+  },
+  {
+    "id": 76,
+    "name": "나초",
+    "originalPrice": 10000,
+    "discountRate": 0.2,
+    "salePrice": 8000,
+    "image": "https://picsum.photos/seed/nacho1/400/400",
+    "description": "치즈와 할라피뇨가 올라간 멕시코식 토르티야 칩."
+  },
+  {
+    "id": 77,
+    "name": "크랩케이크",
+    "originalPrice": 20000,
+    "discountRate": 0.18,
+    "salePrice": 16400,
+    "image": "https://picsum.photos/seed/crab1/400/400",
+    "description": "게살을 뭉쳐서 구운 미국 동부 지역 전통 요리."
+  },
+  {
+    "id": 78,
+    "name": "루벤 샌드위치",
+    "originalPrice": 11000,
+    "discountRate": 0.15,
+    "salePrice": 9350,
+    "image": "https://picsum.photos/seed/sandwich4/400/400",
+    "description": "콘비프와 사우어크라우트가 들어간 뉴욕 스타일 샌드위치."
+  },
+  {
+    "id": 79,
+    "name": "야끼소바",
+    "originalPrice": 9000,
+    "discountRate": 0.12,
+    "salePrice": 7920,
+    "image": "https://picsum.photos/seed/yakisoba1/400/400",
+    "description": "소스로 볶은 일본식 야채 볶음면."
+  },
+  {
+    "id": 80,
+    "name": "그릴드 치즈",
+    "originalPrice": 6000,
+    "discountRate": 0.1,
+    "salePrice": 5400,
+    "image": "https://picsum.photos/seed/grilled1/400/400",
+    "description": "치즈가 녹아내린 바삭한 구운 샌드위치."
+  },
+  {
+    "id": 81,
+    "name": "시카고 피자",
+    "originalPrice": 19000,
+    "discountRate": 0.22,
+    "salePrice": 14820,
+    "image": "https://picsum.photos/seed/pizza5/400/400",
+    "description": "두툼한 반죽과 풍부한 토핑이 특징인 딥디쉬 피자."
+  },
+  {
+    "id": 82,
+    "name": "터키 버거",
+    "originalPrice": 9000,
+    "discountRate": 0.15,
+    "salePrice": 7650,
+    "image": "https://picsum.photos/seed/burger5/400/400",
+    "description": "칠면조 고기로 만든 건강한 버거."
+  },
+  {
+    "id": 83,
+    "name": "야키토리",
+    "originalPrice": 8000,
+    "discountRate": 0.18,
+    "salePrice": 6560,
+    "image": "https://picsum.photos/seed/yakitori1/400/400",
+    "description": "닭고기를 꼬치에 꿰어 구운 일본 전통 요리."
+  },
+  {
+    "id": 84,
+    "name": "광어 초밥",
+    "originalPrice": 15000,
+    "discountRate": 0.2,
+    "salePrice": 12000,
+    "image": "https://picsum.photos/seed/sushi3/400/400",
+    "description": "쫄깃한 광어 살을 올린 신선한 초밥."
+  },
+  {
+    "id": 85,
+    "name": "콩나물국밥",
+    "originalPrice": 7500,
+    "discountRate": 0.1,
+    "salePrice": 6750,
+    "image": "https://picsum.photos/seed/soup7/400/400",
+    "description": "시원한 콩나물 국물에 밥을 말아낸 해장국."
+  },
+  {
+    "id": 86,
+    "name": "그릭 샐러드",
+    "originalPrice": 12500,
+    "discountRate": 0.2,
+    "salePrice": 10000,
+    "image": "https://picsum.photos/seed/salad5/400/400",
+    "description": "페타치즈와 올리브가 들어간 그리스식 샐러드."
+  },
+  {
+    "id": 87,
+    "name": "곰탕",
+    "originalPrice": 11000,
+    "discountRate": 0.15,
+    "salePrice": 9350,
+    "image": "https://picsum.photos/seed/soup8/400/400",
+    "description": "오랫동안 끓인 사골과 내장이 들어간 진한 국물."
+  },
+  {
+    "id": 88,
+    "name": "푸딩",
+    "originalPrice": 4500,
+    "discountRate": 0.18,
+    "salePrice": 3690,
+    "image": "https://picsum.photos/seed/pudding1/400/400",
+    "description": "부드럽고 달콤한 바닐라 커스터드 푸딩."
+  },
+  {
+    "id": 89,
+    "name": "해물파전",
+    "originalPrice": 13000,
+    "discountRate": 0.2,
+    "salePrice": 10400,
+    "image": "https://picsum.photos/seed/pancake2/400/400",
+    "description": "바삭한 반죽에 신선한 해물과 파가 들어간 전."
+  },
+  {
+    "id": 90,
+    "name": "봉골레 파스타",
+    "originalPrice": 14500,
+    "discountRate": 0.15,
+    "salePrice": 12325,
+    "image": "https://picsum.photos/seed/pasta5/400/400",
+    "description": "바지락과 화이트 와인이 어우러진 이탈리아 파스타."
+  },
+  {
+    "id": 91,
+    "name": "프라이드 치킨",
+    "originalPrice": 16000,
+    "discountRate": 0.18,
+    "salePrice": 13120,
+    "image": "https://picsum.photos/seed/chicken3/400/400",
+    "description": "겉은 바삭하고 속은 부드러운 케이준 스타일 프라이드 치킨."
+  },
+  {
+    "id": 92,
+    "name": "비빔냉면",
+    "originalPrice": 9500,
+    "discountRate": 0.12,
+    "salePrice": 8360,
+    "image": "https://picsum.photos/seed/naengmyeon3/400/400",
+    "description": "매콤달콤한 양념에 비빈 차가운 면 요리."
+  },
+  {
+    "id": 93,
+    "name": "쿠키",
+    "originalPrice": 3500,
+    "discountRate": 0.1,
+    "salePrice": 3150,
+    "image": "https://picsum.photos/seed/cookie1/400/400",
+    "description": "바삭하고 달콤한 초콜릿 칩 쿠키."
+  },
+  {
+    "id": 94,
+    "name": "스콘",
+    "originalPrice": 4500,
+    "discountRate": 0.15,
+    "salePrice": 3825,
+    "image": "https://picsum.photos/seed/scone1/400/400",
+    "description": "잼과 크림을 발라 먹는 영국식 전통 빵."
+  },
+  {
+    "id": 95,
+    "name": "츠케멘",
+    "originalPrice": 12500,
+    "discountRate": 0.2,
+    "salePrice": 10000,
+    "image": "https://picsum.photos/seed/ramen5/400/400",
+    "description": "진한 국물에 면을 찍어 먹는 일본식 라멘."
+  },
+  {
+    "id": 96,
+    "name": "부리토",
+    "originalPrice": 11000,
+    "discountRate": 0.18,
+    "salePrice": 9020,
+    "image": "https://picsum.photos/seed/burrito1/400/400",
+    "description": "고기와 콩, 야채를 토르티야로 감싼 멕시코 요리."
+  },
+  {
+    "id": 97,
+    "name": "오이스터",
+    "originalPrice": 22000,
+    "discountRate": 0.25,
+    "salePrice": 16500,
+    "image": "https://picsum.photos/seed/oyster1/400/400",
+    "description": "바다의 우유라 불리는 신선한 생굴."
+  },
+  {
+    "id": 98,
+    "name": "몬테크리스토",
+    "originalPrice": 10500,
+    "discountRate": 0.15,
+    "salePrice": 8925,
+    "image": "https://picsum.photos/seed/sandwich5/400/400",
+    "description": "햄과 치즈를 넣고 달걀물에 적셔 구운 프렌치 샌드위치."
+  },
+  {
+    "id": 99,
+    "name": "잔치국수",
+    "originalPrice": 6000,
+    "discountRate": 0.1,
+    "salePrice": 5400,
+    "image": "https://picsum.photos/seed/noodle3/400/400",
+    "description": "멸치 국물에 소면을 말아낸 한국의 대표 면 요리."
+  },
+  {
+    "id": 100,
+    "name": "아이스크림",
+    "originalPrice": 5000,
+    "discountRate": 0.2,
+    "salePrice": 4000,
+    "image": "https://picsum.photos/seed/icecream1/400/400",
+    "description": "바닐라, 초콜릿, 딸기 맛을 선택할 수 있는 시원한 아이스크림."
   }
 ]
