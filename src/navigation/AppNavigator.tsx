@@ -9,6 +9,7 @@ import ProductListScreen from '../screens/ProductListScreen';
 export type RootStackParamList = {
   ProductList: undefined;
   ProductDetail: { productId: number };
+  Cart: undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -33,6 +34,25 @@ const ProductStack = () => {
   );
 };
 
+const CartStack = () => {
+  return (
+    <Stack.Navigator
+      screenOptions={{ contentStyle: { backgroundColor: '#ffffff' } }}
+    >
+      <Stack.Screen
+        name="Cart"
+        component={CartScreen}
+        options={{ title: '장바구니' }}
+      />
+      <Stack.Screen
+        name="ProductDetail"
+        component={ProductDetailScreen}
+        options={{ title: '상품 상세' }}
+      />
+    </Stack.Navigator>
+  );
+};
+
 const AppNavigator = () => {
   return (
     <NavigationContainer>
@@ -40,14 +60,14 @@ const AppNavigator = () => {
         screenOptions={{ tabBarStyle: { backgroundColor: '#ffffff' } }}
       >
         <Tab.Screen
-          name="Products"
+          name="ProductsTab"
           component={ProductStack}
           options={{ headerShown: false, title: '상품' }}
         />
         <Tab.Screen
-          name="Cart"
-          component={CartScreen}
-          options={{ title: '장바구니' }}
+          name="CartTab"
+          component={CartStack}
+          options={{ headerShown: false, title: '장바구니' }}
         />
       </Tab.Navigator>
     </NavigationContainer>
