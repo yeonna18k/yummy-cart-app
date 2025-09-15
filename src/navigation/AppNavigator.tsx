@@ -2,8 +2,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
 import CartScreen from '../screens/CartScreen';
+import ProductDetailScreen from '../screens/ProductDetailScreen';
 import ProductListScreen from '../screens/ProductListScreen';
 
 export type RootStackParamList = {
@@ -14,16 +14,11 @@ export type RootStackParamList = {
 const Stack = createNativeStackNavigator<RootStackParamList>();
 const Tab = createBottomTabNavigator();
 
-const ProductDetailScreen = () => (
-  <View style={styles.screen}>
-    <Text style={styles.title}>상품 상세</Text>
-    <Text>여기에 상품 상세정보가 표시됩니다</Text>
-  </View>
-);
-
 const ProductStack = () => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+      screenOptions={{ contentStyle: { backgroundColor: '#ffffff' } }}
+    >
       <Stack.Screen
         name="ProductList"
         component={ProductListScreen}
@@ -41,7 +36,9 @@ const ProductStack = () => {
 const AppNavigator = () => {
   return (
     <NavigationContainer>
-      <Tab.Navigator>
+      <Tab.Navigator
+        screenOptions={{ tabBarStyle: { backgroundColor: '#ffffff' } }}
+      >
         <Tab.Screen
           name="Products"
           component={ProductStack}
@@ -56,18 +53,5 @@ const AppNavigator = () => {
     </NavigationContainer>
   );
 };
-
-const styles = StyleSheet.create({
-  screen: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    marginBottom: 20,
-  },
-});
 
 export default AppNavigator;
