@@ -12,7 +12,7 @@ import { useProductNavigation } from '../../hooks/useProductNavigation';
 import CartItem from './CartItem';
 
 const CartItemList = () => {
-  const { items, clearCart } = useCart();
+  const { items, clearCart, totalItems } = useCart();
   const { navigateToProductDetail } = useProductNavigation();
 
   const handleClearCart = () => {
@@ -22,7 +22,7 @@ const CartItemList = () => {
   return (
     <View style={styles.container}>
       <View style={styles.cartLabelContainer}>
-        <Text style={styles.cartLabel}>장바구니 목록</Text>
+        <Text style={styles.cartLabel}>장바구니 목록 ({totalItems}개)</Text>
         <TouchableOpacity onPress={handleClearCart}>
           <Text style={styles.clearText}>전체 삭제</Text>
         </TouchableOpacity>
