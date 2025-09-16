@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
   cardPriceContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 10,
+    gap: 4,
   },
   cardPrice: {
     fontSize: 16,

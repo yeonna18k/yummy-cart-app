@@ -30,7 +30,7 @@ const ProductStack = () => {
       <Stack.Screen
         name="ProductDetail"
         component={ProductDetailScreen}
-        options={{ title: '상품 상세' }}
+        options={{ title: '메뉴 상세' }}
       />
     </Stack.Navigator>
   );
@@ -49,7 +49,7 @@ const CartStack = () => {
       <Stack.Screen
         name="ProductDetail"
         component={ProductDetailScreen}
-        options={{ headerShown: true, title: '상품 상세' }}
+        options={{ title: '메뉴 상세' }}
       />
     </Stack.Navigator>
   );
@@ -66,7 +66,7 @@ const AppNavigator = () => {
           component={ProductStack}
           options={{
             headerShown: false,
-            title: '상품',
+            title: '메뉴',
             tabBarIcon: ProductTabIcon,
             tabBarActiveTintColor: colors.primary,
           }}
@@ -76,7 +76,6 @@ const AppNavigator = () => {
           component={CartStack}
           options={{
             headerShown: false,
-
             title: '장바구니',
             tabBarIcon: CartTabIcon,
             tabBarActiveTintColor: colors.primary,

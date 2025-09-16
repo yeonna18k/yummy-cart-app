@@ -11,14 +11,20 @@ const CheckoutButton = () => {
   };
   return (
     <View style={styles.bottomButtonContainer}>
-      <TouchableOpacity style={styles.checkoutButton} onPress={handlePayment}>
-        <Text style={styles.originalPriceText}>
-          {originalTotalPrice.toLocaleString()}원
-        </Text>
-        <Text style={styles.checkoutButtonText}>
-          {totalPrice.toLocaleString()}원 결제하기
-        </Text>
-      </TouchableOpacity>
+      {totalPrice > 0 ? (
+        <TouchableOpacity style={styles.checkoutButton} onPress={handlePayment}>
+          <Text style={styles.originalPriceText}>
+            {originalTotalPrice.toLocaleString()}원
+          </Text>
+          <Text style={styles.checkoutButtonText}>
+            {totalPrice.toLocaleString()}원 결제하기
+          </Text>
+        </TouchableOpacity>
+      ) : (
+        <TouchableOpacity style={styles.disabledButton}>
+          <Text style={styles.checkoutButtonText}>결제할 상품이 없습니다</Text>
+        </TouchableOpacity>
+      )}
     </View>
   );
 };
@@ -39,6 +45,12 @@ const styles = StyleSheet.create({
     backgroundColor: colors.primary,
     paddingVertical: 15,
     flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  disabledButton: {
+    backgroundColor: '#ccc',
+    paddingVertical: 15,
     justifyContent: 'center',
     alignItems: 'center',
   },
