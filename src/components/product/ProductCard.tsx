@@ -9,7 +9,6 @@ interface ProductCardProps {
 }
 
 const ProductCard = ({ product, onPress }: ProductCardProps) => {
-  // UI만 담당
   return (
     <TouchableOpacity
       onPress={() => onPress(product.id)}
@@ -24,7 +23,7 @@ const ProductCard = ({ product, onPress }: ProductCardProps) => {
           <Text style={styles.cardPrice}>
             {product.salePrice.toLocaleString()}원
           </Text>
-          <Text style={styles.cardDiscountRateText}>
+          <Text style={styles.cardDiscountRate}>
             ({product.discountRate * 100}% 할인)
           </Text>
         </View>
@@ -66,7 +65,7 @@ const styles = StyleSheet.create({
   cardPrice: {
     fontSize: 16,
   },
-  cardDiscountRateText: {
+  cardDiscountRate: {
     fontSize: 14,
     fontWeight: 'bold',
     color: colors.primary,
