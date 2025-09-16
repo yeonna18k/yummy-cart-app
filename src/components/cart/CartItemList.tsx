@@ -30,7 +30,12 @@ const CartItemList = () => {
       <FlatList
         data={items}
         renderItem={({ item }) => (
-          <CartItem item={item} onPress={navigateToProductDetail} />
+          <CartItem
+            item={item}
+            onPress={navigateToProductDetail}
+            minQuantity={1}
+            maxQuantity={100}
+          />
         )}
       />
     </View>

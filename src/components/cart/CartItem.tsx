@@ -8,10 +8,20 @@ import { CartItem as CartItemTypes } from '../../types/cartTypes';
 interface CartItemProps {
   item: CartItemTypes;
   onPress: (productId: number) => void;
+  minQuantity: number;
+  maxQuantity: number;
 }
 
-const CartItem = ({ item, onPress }: CartItemProps) => {
+const CartItem = ({
+  item,
+  onPress,
+  minQuantity = 1,
+  maxQuantity = 100,
+}: CartItemProps) => {
   const { updateQuantity, removeFromCart } = useCart();
+
+  const isDecreaseDisabled = item.quantity <= minQuantity;
+  const isIncreaseDisabled = item.quantity >= maxQuantity;
 
   const decreaseQuantity = () => {
     if (item.quantity > 1) {
@@ -47,16 +57,25 @@ const CartItem = ({ item, onPress }: CartItemProps) => {
         </TouchableOpacity>
         <View style={styles.quantitySelector}>
           <TouchableOpacity
-            style={styles.quantityButton}
+            style={[
+              styles.quantityButton,
+              isDecreaseDisabled && styles.disabledButton,
+            ]}
             onPress={decreaseQuantity}
+            disabled={isDecreaseDisabled}
           >
             <Text style={styles.quantityButtonText}>-</Text>
           </TouchableOpacity>
           <Text style={styles.quantityText}>{item.quantity}</Text>
-          <TouchableOpacity style={styles.quantityButton}>
-            <Text style={styles.quantityButtonText} onPress={increaseQuantity}>
-              +
-            </Text>
+          <TouchableOpacity
+            style={[
+              styles.quantityButton,
+              isIncreaseDisabled && styles.disabledButton,
+            ]}
+            onPress={increaseQuantity}
+            disabled={isIncreaseDisabled}
+          >
+            <Text style={styles.quantityButtonText}>+</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -115,7 +134,9 @@ const styles = StyleSheet.create({
   quantityButtonText: {
     fontSize: 16,
     lineHeight: 16,
-    // color: '#fff',
   },
   quantityText: {},
+  disabledButton: {
+    backgroundColor: '#eee',
+  },
 });

@@ -1,13 +1,14 @@
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Alert, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { colors } from '../../constants/colors';
 import { useCart } from '../../hooks/useCart';
 
 const CheckoutButton = () => {
-  const { originalTotalPrice, totalPrice } = useCart();
+  const { originalTotalPrice, totalPrice, clearCart } = useCart();
 
   const handlePayment = () => {
-    console.log('결제하기');
+    Alert.alert('결제 완료', '결제가 완료되었습니다.');
+    clearCart();
   };
   return (
     <View style={styles.bottomButtonContainer}>
