@@ -2,6 +2,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
+import { CartTabIcon, ProductTabIcon } from '../components/icons/TabIcons';
+import { colors } from '../constants/colors';
 import CartScreen from '../screens/CartScreen';
 import ProductDetailScreen from '../screens/ProductDetailScreen';
 import ProductListScreen from '../screens/ProductListScreen';
@@ -47,7 +49,7 @@ const CartStack = () => {
       <Stack.Screen
         name="ProductDetail"
         component={ProductDetailScreen}
-        options={{ title: '상품 상세' }}
+        options={{ headerShown: true, title: '상품 상세' }}
       />
     </Stack.Navigator>
   );
@@ -62,12 +64,23 @@ const AppNavigator = () => {
         <Tab.Screen
           name="ProductsTab"
           component={ProductStack}
-          options={{ headerShown: false, title: '상품' }}
+          options={{
+            headerShown: false,
+            title: '상품',
+            tabBarIcon: ProductTabIcon,
+            tabBarActiveTintColor: colors.primary,
+          }}
         />
         <Tab.Screen
           name="CartTab"
           component={CartStack}
-          options={{ headerShown: false, title: '장바구니' }}
+          options={{
+            headerShown: false,
+
+            title: '장바구니',
+            tabBarIcon: CartTabIcon,
+            tabBarActiveTintColor: colors.primary,
+          }}
         />
       </Tab.Navigator>
     </NavigationContainer>
