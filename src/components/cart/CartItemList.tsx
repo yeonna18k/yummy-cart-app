@@ -22,7 +22,7 @@ const CartItemList = () => {
   return (
     <View style={styles.container}>
       <View style={styles.cartLabelContainer}>
-        <Text style={styles.cartLabel}>장바구니 목록 ({totalItems}개)</Text>
+        <Text style={styles.cartLabel}>장바구니 목록 ({totalItems}건)</Text>
         <TouchableOpacity onPress={handleClearCart}>
           <Text style={styles.clearText}>전체 삭제</Text>
         </TouchableOpacity>
