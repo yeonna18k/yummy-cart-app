@@ -217,29 +217,11 @@ src/
 
 ## 🎬 데모 영상
 
-링크 첨부
+https://drive.google.com/file/d/1SAEbwqj7djLuCpqkjKjvNbYVwyAQkag4/view?usp=sharing
 
-## 📦 빌드 방법
+## 📦 Android APK
 
-### Android APK 빌드
+https://drive.google.com/file/d/1nDbEEVfo7t6A_vEJoKh-SPqzMw9irOc0/view?usp=sharing
 
-```bash
-# Release APK 생성
-cd android
-./gradlew assembleRelease
-
-# APK 파일 위치: android/app/build/outputs/apk/release/
-```
-
-### iOS 빌드 (macOS만 해당)
-
-```bash
-# Xcode에서 빌드
-open ios/YamiCartApp.xcworkspace
-
-# 또는 커맨드라인
-npx react-native run-ios --configuration Release
-```
-
-**이메일**: yeonna18k@gmail.com
+**이메일**: yeonna18k@gmail.com |
 **개발 기간**: 2025년 9월
