@@ -14,6 +14,10 @@ import { useProductNavigation } from '../hooks/useProductNavigation';
 import { mockApi } from '../services/mockApi';
 import { Product } from '../types/productTypes';
 
+const ITEM_HEIGHT = 120;
+const ITEM_MARGIN = 10;
+const TOTAL_ITEM_HEIGHT = ITEM_HEIGHT + ITEM_MARGIN;
+
 const ProductListScreen = () => {
   const { navigateToProductDetail } = useProductNavigation();
 
@@ -37,7 +41,13 @@ const ProductListScreen = () => {
       if (isRefresh || page === 1) {
         setProducts(response.data);
       } else {
-        setProducts(prev => [...prev, ...response.data]);
+        setProducts(prevProducts => {
+          const existingIds = new Set(prevProducts.map(p => p.id));
+          const uniqueNewProducts = response.data.filter(
+            p => !existingIds.has(p.id),
+          );
+          return [...prevProducts, ...uniqueNewProducts];
+        });
       }
       setHasMore(response.hasMore);
       setCurrentPage(page);
@@ -53,6 +63,9 @@ const ProductListScreen = () => {
   const loadMoreProducts = useCallback(() => {
     if (hasMore && !isLoadingMore) {
       loadProducts(currentPage + 1);
+    }
+    if (isLoadingMore || !hasMore) {
+      return;
     }
   }, [hasMore, isLoadingMore, currentPage, loadProducts]);
 
@@ -102,6 +115,16 @@ const ProductListScreen = () => {
         refreshing={isLoading && currentPage === 1}
         onRefresh={handleRefresh}
         ListFooterComponent={renderFooter}
+        removeClippedSubviews={true}
+        maxToRenderPerBatch={10}
+        windowSize={8}
+        initialNumToRender={8}
+        updateCellsBatchingPeriod={50}
+        getItemLayout={(data, index) => ({
+          length: TOTAL_ITEM_HEIGHT,
+          offset: TOTAL_ITEM_HEIGHT * index,
+          index,
+        })}
       />
     </View>
   );

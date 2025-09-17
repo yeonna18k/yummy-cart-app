@@ -32,7 +32,7 @@ const ProductCard = ({ product, onPress }: ProductCardProps) => {
   );
 };
 
-export default ProductCard;
+export default React.memo(ProductCard);
 
 const styles = StyleSheet.create({
   container: {
