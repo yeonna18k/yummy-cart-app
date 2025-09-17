@@ -1,5 +1,5 @@
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import { createContext, ReactNode, useEffect, useReducer } from 'react';
+import { cartStorage } from '../services/storage';
 import { CartItem, CartState } from '../types/cartTypes';
 import { cartReducer, initialState } from './cartReducer';
 
@@ -14,28 +14,13 @@ export const CartContext = createContext<CartContextType | undefined>(
   undefined,
 );
 
-const CART_STORAGE_KEY = '@cart_items';
-
 export const CartProvider = ({ children }: { children: ReactNode }) => {
   const [state, dispatch] = useReducer(cartReducer, initialState);
 
   const loadCartFromStorage = async () => {
-    try {
-      const cartData = await AsyncStorage.getItem(CART_STORAGE_KEY);
-      if (cartData) {
-        const parsedCart: CartItem[] = JSON.parse(cartData);
-        dispatch({ type: 'LOAD_CART', payload: parsedCart });
-      }
-    } catch (error) {
-      console.error('장바구니 데이터 로드 실패:', error);
-    }
-  };
-
-  const saveCartToStorage = async (items: CartItem[]) => {
-    try {
-      await AsyncStorage.setItem(CART_STORAGE_KEY, JSON.stringify(items));
-    } catch (error) {
-      console.error('장바구니 데이터 저장 실패:', error);
+    const cartItems = await cartStorage.loadCart();
+    if (cartItems.length > 0) {
+      dispatch({ type: 'LOAD_CART', payload: cartItems });
     }
   };
 
@@ -44,7 +29,7 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
   }, []);
 
   useEffect(() => {
-    saveCartToStorage(state.items);
+    cartStorage.saveCart(state.items);
   }, [state.items]);
 
   const addToCart = (item: CartItem) => {
@@ -59,8 +44,9 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
     dispatch({ type: 'UPDATE_QUANTITY', payload: { id, quantity } });
   };
 
-  const clearCart = () => {
+  const clearCart = async () => {
     dispatch({ type: 'CLEAR_CART' });
+    await cartStorage.clearCart();
   };
 
   const value: CartContextType = {

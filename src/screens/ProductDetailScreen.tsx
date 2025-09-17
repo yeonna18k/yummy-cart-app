@@ -10,7 +10,7 @@ import ProductQuantitySelector from '../components/product/ProductQuantitySelect
 import { useCart } from '../hooks/useCart';
 import { RootStackParamList } from '../navigation/AppNavigator';
 import { mockApi } from '../services/mockApi';
-import { Product } from '../types/Product';
+import { Product } from '../types/productTypes';
 
 type ProductDetailRouteProp = RouteProp<RootStackParamList, 'ProductDetail'>;
 

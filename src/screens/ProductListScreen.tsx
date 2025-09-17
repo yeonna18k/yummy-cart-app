@@ -9,9 +9,10 @@ import {
 import ErrorView from '../components/common/ErrorView';
 import LoadingView from '../components/common/LoadingView';
 import ProductCard from '../components/product/ProductCard';
+import { colors } from '../constants/colors';
 import { useProductNavigation } from '../hooks/useProductNavigation';
 import { mockApi } from '../services/mockApi';
-import { Product } from '../types/Product';
+import { Product } from '../types/productTypes';
 
 const ProductListScreen = () => {
   const { navigateToProductDetail } = useProductNavigation();
@@ -76,7 +77,7 @@ const ProductListScreen = () => {
     if (!isLoadingMore) return null;
     return (
       <View style={styles.footerLoader}>
-        <ActivityIndicator size="small" color="#007AFF" />
+        <ActivityIndicator size="small" color={colors.primary} />
         <Text>더 많은 상품을 불러오는 중입니다</Text>
       </View>
     );

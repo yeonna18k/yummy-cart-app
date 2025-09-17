@@ -1,5 +1,5 @@
 import productsData from '../data/products.json';
-import { ProductsResponse } from '../types/Product';
+import { ProductsResponse } from '../types/productTypes';
 
 const delay = (ms: number) =>
   new Promise(resolve => setTimeout(() => resolve(undefined), ms));

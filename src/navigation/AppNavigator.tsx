@@ -4,15 +4,11 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
 import { CartTabIcon, ProductTabIcon } from '../components/icons/TabIcons';
 import { colors } from '../constants/colors';
+import { SCREENS, TABS } from '../constants/screen';
 import CartScreen from '../screens/CartScreen';
 import ProductDetailScreen from '../screens/ProductDetailScreen';
 import ProductListScreen from '../screens/ProductListScreen';
-
-export type RootStackParamList = {
-  ProductList: undefined;
-  ProductDetail: { productId: number };
-  Cart: undefined;
-};
+import { RootStackParamList } from '../types/navigationTypes';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 const Tab = createBottomTabNavigator();
@@ -23,12 +19,12 @@ const ProductStack = () => {
       screenOptions={{ contentStyle: { backgroundColor: '#ffffff' } }}
     >
       <Stack.Screen
-        name="ProductList"
+        name={SCREENS.PRODUCT_LIST}
         component={ProductListScreen}
         options={{ title: '야미 마켓' }}
       />
       <Stack.Screen
-        name="ProductDetail"
+        name={SCREENS.PRODUCT_DETAIL}
         component={ProductDetailScreen}
         options={{ title: '메뉴 상세' }}
       />
@@ -42,12 +38,12 @@ const CartStack = () => {
       screenOptions={{ contentStyle: { backgroundColor: '#ffffff' } }}
     >
       <Stack.Screen
-        name="Cart"
+        name={SCREENS.CART}
         component={CartScreen}
         options={{ title: '장바구니' }}
       />
       <Stack.Screen
-        name="ProductDetail"
+        name={SCREENS.PRODUCT_DETAIL}
         component={ProductDetailScreen}
         options={{ title: '메뉴 상세' }}
       />
@@ -62,7 +58,7 @@ const AppNavigator = () => {
         screenOptions={{ tabBarStyle: { backgroundColor: '#ffffff' } }}
       >
         <Tab.Screen
-          name="ProductsTab"
+          name={TABS.PRODUCTS_TAB}
           component={ProductStack}
           options={{
             headerShown: false,
@@ -72,7 +68,7 @@ const AppNavigator = () => {
           }}
         />
         <Tab.Screen
-          name="CartTab"
+          name={TABS.CART_TAB}
           component={CartStack}
           options={{
             headerShown: false,

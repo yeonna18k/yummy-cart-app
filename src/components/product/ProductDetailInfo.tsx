@@ -2,7 +2,7 @@ import React from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
 import Iconicons from 'react-native-vector-icons/Ionicons';
 import { colors } from '../../constants/colors';
-import { Product } from '../../types/Product';
+import { Product } from '../../types/productTypes';
 
 const ProductDetailInfo = ({ product }: { product: Product }) => {
   return (
