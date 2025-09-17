@@ -2,6 +2,16 @@
 
 React Native로 제작된 모바일 장바구니 관리 앱입니다. 사용자는 장바구니에 상품을 추가하고, 내역을 확인 및 수정할 수 있습니다.
 
+## 지원 플랫폼
+
+- ✅ Android
+
+## 개발 환경
+
+- Android Studio
+- Android SDK
+- Android 에뮬레이터
+
 ## 🚀 프로젝트 실행 방법
 
 ### 1. 개발 환경 설정
@@ -10,8 +20,7 @@ React Native로 제작된 모바일 장바구니 관리 앱입니다. 사용자�
 
 - Node.js (v20 이상)
 - React Native CLI
-- Android Studio (Android 개발)
-- Xcode (iOS 개발 - macOS만 해당)
+- Android Studio
 
 #### React Native 환경 설정
 
@@ -32,25 +41,13 @@ cd yummy-cart-app
 
 # 의존성 설치
 npm install
-
-# iOS 의존성 설치 (macOS만 해당)
-cd ios && pod install && cd ..
 ```
 
 ### 3. 앱 실행
 
-#### Android
-
 ```bash
 # Android 에뮬레이터 또는 실제 기기 연결 후
 npm run android
-```
-
-#### iOS (macOS만 해당)
-
-```bash
-# iOS 시뮬레이터에서 실행
-npm run ios
 ```
 
 #### Metro 서버 별도 실행 (필요한 경우)
@@ -172,14 +169,6 @@ src/
 - **트레이드오프**:
   - 대용량 데이터에는 부적합
   - 복잡한 쿼리 불가능
-
-### Mock 데이터 활용
-
-- **장점**:
-  - 백엔드 없이 빠른 테스트 가능
-  - 일관된 테스트 데이터
-- **트레이드오프**:
-  - 실제 API 연동 시 추가 작업 필요
 
 ## 🚧 개발 중 발생한 이슈 및 해결방안
 
